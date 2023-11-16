@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --background: white;
+    --text: black;
+}
+
+:root[data-theme="dark"] {
+    --background: black;
+    --text: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    color: var(--text);
+	vertical-align: baseline;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+    background-color: var(--background);
+
+    transition: background-color 0.1s ease;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+header .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.theme-button i {
+    position: fixed;
+    right: 2rem;
+    top:   2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+
+    font-size: 2rem;
+    text-align: center;
+
+    background-color: var(--background);
+    color: var(--text);
+    border: 3px solid var(--text);
+    border-radius: 50px;
+    
+    transition: transform 150ms ease-in-out, opacity 0s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(115%);
+    }
+
+    &:active {
+        opacity: 0.25;
+        transition: transform 150ms ease-in-out, opacity 150ms ease-in-out;
+    }
+}
+
+.title {
+    width: 75%;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    margin: 1rem 1rem;
+    font-size: 2.5rem;
+    text-justify: center;
+    text-align: center;
+
+    transition: transform 150ms ease-in-out;
+    &:hover {
+        transform: scale(110%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .theme-button:hover {
+        transform: none;
+    }
+}
